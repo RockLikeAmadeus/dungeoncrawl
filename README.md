@@ -1,0 +1,1 @@
+On Cosmic, this won't build due to a bug, apparently a Wayland issue. Run with `$ WINIT_UNIX_BACKEND=x11 cargo run` until resolved. See `https://github.com/amethyst/bracket-lib/issues/373`

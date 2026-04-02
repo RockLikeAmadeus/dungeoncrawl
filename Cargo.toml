@@ -1,6 +1,11 @@
 [package]
-name = "dungeoncrawl"
+name = "rusty-roguelike"
 version = "0.1.0"
+authors = ["Alec Hampton <alhampton9@gmail.com"]
 edition = "2024"
 
 [dependencies]
+bracket-lib = "~0.8.7"
+
+[workspace.dependencies]
+bracket-lib = {  git = "https://github.com/amethyst/bracket-lib.git" }
