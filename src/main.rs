@@ -11,17 +11,17 @@ mod prelude {
 
 use prelude::*;
 
-struct State {
+struct Game {
     map: Map,
 }
 
-impl State {
+impl Game {
     fn new() -> Self {
         Self { map: Map::new() }
     }
 }
 
-impl GameState for State {
+impl GameState for Game {
     fn tick(&mut self, ctx: &mut BTerm) {
         ctx.cls();
         self.map.render(ctx);
@@ -33,5 +33,5 @@ fn main() -> BError {
         .with_title("Dungeoncrawl")
         .with_fps_cap(30.0)
         .build()?;
-    main_loop(context, State::new())
+    main_loop(context, Game::new())
 }
