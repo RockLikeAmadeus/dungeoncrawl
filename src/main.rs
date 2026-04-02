@@ -1,4 +1,5 @@
 mod map;
+mod map_builder;
 mod player;
 
 mod prelude {
@@ -6,6 +7,7 @@ mod prelude {
     pub const SCREEN_WIDTH: i32 = 80;
     pub const SCREEN_HEIGHT: i32 = 50;
     pub use crate::map::*;
+    pub use crate::map_builder::*;
     pub use crate::player::*;
 }
 
@@ -13,14 +15,14 @@ use prelude::*;
 
 struct Game {
     map: Map,
-    player: Player
+    player: Player,
 }
 
 impl Game {
     fn new() -> Self {
         Self {
             map: Map::new(),
-            player: Player::new(Point::new(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)),
+            player: Player::new(Point::new(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)),
         }
     }
 }
