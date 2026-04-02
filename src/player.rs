@@ -22,10 +22,14 @@ impl Player {
     pub fn update(&mut self, ctx: &mut BTerm, map: &Map) {
         if let Some(key) = ctx.key {
             let delta = match key {
-                VirtualKeyCode::Left => Point::new(-1, 0),
+                /*VirtualKeyCode::Left => Point::new(-1, 0),
                 VirtualKeyCode::Right => Point::new(1, 0),
                 VirtualKeyCode::Up => Point::new(0, -1),
-                VirtualKeyCode::Down => Point::new(0, 1),
+                VirtualKeyCode::Down => Point::new(0, 1),*/
+                VirtualKeyCode::H => Point::new(-1, 0),
+                VirtualKeyCode::L => Point::new(1, 0),
+                VirtualKeyCode::K => Point::new(0, -1),
+                VirtualKeyCode::J => Point::new(0, 1),
                 _ => Point::zero(),
             };
             let new_position = self.position + delta;
