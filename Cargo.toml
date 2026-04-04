@@ -6,6 +6,8 @@ edition = "2024"
 
 [dependencies]
 bracket-lib = "~0.8.7"
+legion.workspace = true
 
 [workspace.dependencies]
 bracket-lib = {  git = "https://github.com/amethyst/bracket-lib.git" }
+legion = "=0.4.0"
