@@ -21,6 +21,8 @@ mod prelude {
     pub use crate::spawner::*;
     pub use crate::systems::*;
     pub use crate::turn_state::*;
+    pub use legion::systems::CommandBuffer; // Not sure if this belongs here, may cause issues
+
 }
 
 use prelude::*;
